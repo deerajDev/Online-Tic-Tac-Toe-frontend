@@ -1,11 +1,11 @@
-import React from 'react'
-
+import React from "react";
+import ButtonContainer from "./components/ButtonContainer";
 const App = () => {
   return (
     <div>
-      <h2>Hello world</h2>
+      <ButtonContainer />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

@@ -27,6 +27,7 @@
   font-style: normal;
   font-weight: normal;
   font-size: 27px;
+  background: none;
   color: #ffffff;
 }
 
@@ -36,5 +37,4 @@
   width: 270px;
   height: 80px;
   cursor: pointer;
-
 }

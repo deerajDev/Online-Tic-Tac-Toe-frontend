@@ -1,0 +1,52 @@
+.modal_container_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.modal_container {
+  /*dimensions */
+  width: 311px;
+  height: 198px;
+  border-radius: 67px;
+
+  /*colouring*/
+  border: 3px solid #14a6ca;
+
+  /*padding and margin */
+  padding-top: 50px;
+  padding-left: 40px;
+}
+
+.modal_input {
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-bottom: 2px solid #2992b3;
+}
+
+.modal_input::placeholder {
+  color: rgb(230, 222, 222);
+  opacity: 0.8;
+}
+
+.button_override {
+  width: 200px;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 10px;
+  transition: width 0.3s ease-in-out 0s, height 0.3s ease-in-out 0s;
+}
+
+.button_override:hover {
+  cursor: pointer;
+  width: 210px;
+  height: 35px;
+}
+
+.button_text_override {
+  font-size: 15px;
+  background: none;
+}

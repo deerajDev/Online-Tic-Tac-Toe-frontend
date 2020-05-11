@@ -3,8 +3,8 @@ import "./css/button.css";
 
 const Button = (props) => {
   return (
-    <div onClick={} className="button">
-      <p className="button_text">{props.text}</p>
+    <div className={`button ${props.extra_button_style}`}>
+      <p className={`button_text ${props.extra_text_style}`}>{props.text}</p>
     </div>
   );
 };

@@ -1,0 +1,39 @@
+.button {
+  /* dimensions */
+  width: 250px;
+  height: 70px;
+  border-radius: 9px;
+  margin-bottom: 20px;
+
+  /* colouring */
+  background: linear-gradient(
+    89.09deg,
+    #17468c 3.33%,
+    #2992b3 53.38%,
+    #71c2fc 81.81%
+  );
+
+  /* arrangements */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* transitions*/
+  transition: width 0.4s ease-out 0s, height 0.4s ease-out 0s;
+}
+
+.button_text {
+  font-family: Questrial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 27px;
+  color: #ffffff;
+}
+
+/* pseudo selector */
+
+.button:hover {
+  width: 270px;
+  height: 80px;
+  cursor: pointer;
+}

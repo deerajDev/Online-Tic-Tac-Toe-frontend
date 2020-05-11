@@ -1,11 +1,14 @@
 import React from "react";
-import ButtonContainer from "./components/ButtonContainer";
-import Modal from "./components/Modal";
+// import Choices from "./containers/Choice";
+// import JoinGame from "./containers/JoinGame";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
 const App = () => {
   return (
-    <div>
-      <Modal />
-    </div>
+    <Router>
+      {/* <Route exact path="/" component={Choices} />
+      <Route exact path="/join" component={JoinGame} /> */}
+    </Router>
   );
 };
 

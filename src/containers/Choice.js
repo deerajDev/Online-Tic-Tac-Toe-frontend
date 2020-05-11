@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonContainer from "../components/ButtonContainer";
+import ButtonContainer from "../components/js/button/ButtonContainer";
 import { useHistory } from "react-router-dom";
 
 const Choice = () => {

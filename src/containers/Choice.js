@@ -10,7 +10,7 @@ const Choice = () => {
   return (
     <div>
       <ButtonContainer
-        hostGameHandler={() => redirectTo("/")}
+        hostGameHandler={() => redirectTo("/game")}
         createGameHandler={() => redirectTo("/join")}
       />
     </div>

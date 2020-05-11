@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./Button";
+import Button from "./button/Button";
 import "../css/modal/modal.css";
 const Modal = () => {
   return (

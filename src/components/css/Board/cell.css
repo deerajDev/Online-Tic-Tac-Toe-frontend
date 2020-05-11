@@ -1,4 +1,18 @@
 .cell {
-  width: 340px;
-  height: 95px;
+  /* dimensions*/
+  width: 100px;
+  height: 100px;
+  border-radius: 34px;
+
+  /*decoration*/
+  background: #2992b3;
+
+  /* transition */
+  transition: width 0.2s ease-out 0s, height 0.2s ease-in-out 0s;
+}
+
+.cell:hover {
+  width: 105px;
+  height: 105px;
+  cursor: pointer;
 }

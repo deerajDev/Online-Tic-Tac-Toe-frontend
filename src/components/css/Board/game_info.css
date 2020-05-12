@@ -5,3 +5,19 @@
   justify-content: space-around;
   color: white;
 }
+
+.player-active {
+  animation: showActive 2s infinite;
+}
+
+@keyframes showActive {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

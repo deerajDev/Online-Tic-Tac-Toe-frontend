@@ -1,9 +1,10 @@
 import React from "react";
-
+import "../../css/Board/image.css";
 export const Circle = () => (
   <svg
-    width="50"
-    height="50"
+    className="svg-image"
+    width="40"
+    height="40"
     viewBox="0 0 189 189"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -19,8 +20,9 @@ export const Circle = () => (
 
 export const Cancel = () => (
   <svg
-    width="75"
-    height="69"
+    className="svg-image"
+    width="40"
+    height="40"
     viewBox="0 0 75 69"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

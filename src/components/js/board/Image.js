@@ -2,7 +2,7 @@ import React from "react";
 import { Cancel, Circle } from "./Svg";
 
 const Image = () => {
-  return <Cancel />;
+  return <Circle />;
 };
 
 export default Image;

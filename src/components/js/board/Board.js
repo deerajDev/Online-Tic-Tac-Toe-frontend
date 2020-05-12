@@ -5,7 +5,7 @@ import "../../css/Board/board.css";
 const Board = (props) => {
   return (
     <div className="board">
-      <h2 className="board-heading">Game id: 2344534</h2>
+      <h2 className="board-heading">Game id : {props.gameID}</h2>
       <Row />
       <Row />
       <Row />

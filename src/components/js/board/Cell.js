@@ -15,7 +15,10 @@ const Cell = () => {
     dispatch({ type: "SWITCH_TURN" });
   };
   return (
-    <div className="cell" onClick={state.myTurn ? handleChange : null}>
+    <div
+      className="cell"
+      onClick={state.myTurn & state.gameStarted ? handleChange : null}
+    >
       {clicked && <Image />}
     </div>
   );

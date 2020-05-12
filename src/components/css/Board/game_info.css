@@ -10,12 +10,29 @@
   animation: showActive 2s infinite;
 }
 
+.show-info {
+  color: white;
+  animation: showInfo 3s infinite;
+}
+
 @keyframes showActive {
   0% {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes showInfo {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
   }
   100% {
     transform: translateY(0px);

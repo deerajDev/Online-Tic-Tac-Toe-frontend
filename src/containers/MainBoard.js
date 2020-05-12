@@ -6,11 +6,14 @@ export const gameContextDispatch = React.createContext();
 export const gameContextState = React.createContext();
 
 const MainBoard = () => {
-  const [state, dispatch] = useReducer(gameStateReducer, { myTurn: true });
+  const [state, dispatch] = useReducer(gameStateReducer, {
+    myTurn: true,
+    gameStarted: false,
+  });
   return (
     <gameContextDispatch.Provider value={dispatch}>
       <gameContextState.Provider value={state}>
-        <Board />
+        <Board gameId={state.gameID} />
       </gameContextState.Provider>
     </gameContextDispatch.Provider>
   );

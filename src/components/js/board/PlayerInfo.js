@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "./Image";
+
 const PlayerInfo = () => {
   return (
     <div>
-      <h4>Deeraj</h4>
-      </br>
+      <h3>Deeraj</h3>
       <Image />
     </div>
   );

@@ -1,0 +1,48 @@
+.notification-container {
+  position: absolute;
+  bottom: 0;
+  left: -50%;
+
+  width: 200px;
+  height: 30px;
+  padding-top: 5px;
+
+  background-color: rgb(124, 110, 110);
+  animation: showNotification 3s none;
+}
+
+.notification-message {
+  width: 90%;
+  height: 80%;
+  margin: auto;
+  font-size: 15px;
+  font-family: Questrial;
+  color: white;
+  background: none;
+}
+.notification-color {
+  width: 100%;
+  height: 20%;
+  background-color: rgb(51, 144, 51);
+}
+
+@keyframes showNotification {
+  0% {
+    left: -50%;
+  }
+  25% {
+    left: 10px;
+  }
+  50% {
+    left: 0;
+  }
+  95% {
+    left: 0;
+  }
+  99% {
+    left: -10%;
+  }
+  100% {
+    left: -20%;
+  }
+}

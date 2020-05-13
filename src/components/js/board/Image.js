@@ -6,7 +6,6 @@ const Image = (props) => {
     if (props.imageID % 2 === 0) {
       return <Circle />;
     } else {
-      console.log("entered the else statement");
       return <Cancel />;
     }
   } else return <></>;

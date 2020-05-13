@@ -12,13 +12,12 @@ const Cell = (props) => {
   const state = useContext(gameContextState);
   const dispatch = useContext(gameContextDispatch);
   const opponentMove = useContext(opponentContextState);
-
   const handleChange = () => {
     setClicked(true);
     dispatch({ type: "SWITCH_TURN" });
   };
   //if opponent move belongs to this cell
-  if (opponentMove === props.cell_num) {
+  if (opponentMove && opponentMove.opponentMove === props.cell_num) {
     return (
       <div className="cell">
         <Image imageID={state.userType + 1} />

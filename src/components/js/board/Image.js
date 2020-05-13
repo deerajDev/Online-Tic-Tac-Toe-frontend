@@ -1,17 +1,14 @@
-import React, { useContext } from "react";
-import { gameContextState } from "../../../containers/MainBoard";
+import React from "react";
 import { Cancel, Circle } from "./Svg";
 
-const Image = () => {
-  const state = useContext(gameContextState);
-  if (state.gameStarted) {
-    if (state.userType % 2 === 0) {
+const Image = (props) => {
+  if (props.imageID) {
+    if (props.imageID % 2 === 0) {
       return <Circle />;
     } else {
+      console.log("entered the else statement");
       return <Cancel />;
     }
-  }
-  return <></>;
+  } else return <></>;
 };
-
 export default Image;

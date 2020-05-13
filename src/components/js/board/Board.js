@@ -6,9 +6,9 @@ const Board = (props) => {
   return (
     <div className="board">
       <h2 className="board-heading">Game id : {props.gameID}</h2>
-      <Row />
-      <Row />
-      <Row />
+      <Row row_num={"0"} />
+      <Row row_num={"1"} />
+      <Row row_num={"2"} />
       <GameInfo />
     </div>
   );

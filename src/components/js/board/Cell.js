@@ -1,40 +1,49 @@
-import React, { useState, useContext } from "react";
+import React, { useContext, useMemo } from "react";
 import {
   gameContextState,
-  gameContextDispatch,
-  opponentContextState,
 } from "../../../containers/MainBoard";
+import { connectionContext } from "./Board";
 import Image from "./Image";
 import "../../css/Board/cell.css";
 
 const Cell = (props) => {
-  const [clicked, setClicked] = useState(false);
-  const state = useContext(gameContextState);
-  const dispatch = useContext(gameContextDispatch);
-  const opponentMove = useContext(opponentContextState);
+  const gameState = useContext(gameContextState);
+  const connection = useContext(connectionContext);
+  //memoiszation of row num and col num
+  const [row_num, col_num] = useMemo(() => {
+    const temp = props.cell_num.split("_");
+    const row_num = parseInt(temp[0]);
+    const col_num = parseInt(temp[1]);
+    return [row_num, col_num];
+  }, []);
+
+  const value = gameState.matrix[row_num][col_num];
   const handleChange = () => {
-    setClicked(true);
-    dispatch({ type: "SWITCH_TURN" });
+    connection.send(
+      JSON.stringify({
+        action: "update",
+        userType: gameState.userType,
+        cell_num: props.cell_num,
+      })
+    );
   };
-  //if opponent move belongs to this cell
-  if (opponentMove && opponentMove.opponentMove === props.cell_num) {
+  //if matrix value is undefined
+  if (value !== undefined) {
     return (
       <div className="cell">
-        <Image imageID={state.userType + 1} />
+        <Image imgID={value % 2} />
       </div>
     );
   }
-
-  //if this box is clicked  by you
-  return (
-    <div
-      className="cell"
-      // onClick={state.myTurn & state.gameStarted ? handleChange : null}
-      onClick={handleChange}
-    >
-      {clicked && <Image imageID={state.userType} />}
-    </div>
-  );
+  //else render the empty cell
+  else {
+    return (
+      <div
+        className="cell"
+        onClick={gameState.myTurn & gameState.gameStarted ? handleChange : null}
+      ></div>
+    );
+  }
 };
 
 export default Cell;

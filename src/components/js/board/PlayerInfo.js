@@ -5,7 +5,7 @@ const PlayerInfo = (props) => {
   return (
     <div>
       <h3 className={`${props.animationClass}`}>{props.name}</h3>
-      <Image />
+      <Image imgID={props.imgID}/>
     </div>
   );
 };

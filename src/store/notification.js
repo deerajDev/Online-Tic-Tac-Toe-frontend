@@ -1,11 +1,11 @@
 const notificationReducer = (state, action) => {
   switch (action.type) {
     case "SUCCESS":
-      return { msg: action.msg, color: "green" };
+      return { msg: action.payload, type: "success" };
     case "WARNING":
-      return { msg: action.msg, color: "yellow" };
+      return { msg: action.payload, type: "info" };
     case "ERROR":
-      return { msg: action.msg, color: "red" };
+      return { msg: action.payload, type: "error" };
     default:
       return state;
   }

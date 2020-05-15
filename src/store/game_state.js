@@ -32,6 +32,18 @@ const gameStateReducer = (state, action) => {
         ...state,
         ...action.payload,
       };
+
+    case "RESET":
+      const matrix = [
+        [undefined, undefined, undefined],
+        [undefined, undefined, undefined],
+        [undefined, undefined, undefined],
+      ];
+      return {
+        ...state,
+        matrix: matrix,
+        ...action.payload,
+      };
     default:
       return state;
   }

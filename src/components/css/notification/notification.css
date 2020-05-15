@@ -20,12 +20,23 @@
   color: white;
   background: none;
 }
-.notification-color {
+.success {
   width: 100%;
   height: 20%;
   background-color: rgb(51, 144, 51);
 }
 
+.error {
+  width: 100%;
+  height: 20%;
+  background-color: rgb(204, 24, 24);
+}
+
+.info {
+  width: 100%;
+  height: 20%;
+  background-color: rgb(198, 218, 24);
+}
 @keyframes showNotification {
   0% {
     left: -50%;

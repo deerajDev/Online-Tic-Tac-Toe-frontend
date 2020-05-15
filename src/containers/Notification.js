@@ -1,13 +1,11 @@
-import React, { useReducer } from "react";
-import notificationReducer from "../store/notification";
+import React, { useContext } from "react";
+import { notificationStateContext } from "../App";
 
 import Notifier from "../components/js/notification/Notification";
 
-const initialState = {};
-
 const Notification = () => {
-  const state = useReducer(notificationReducer, initialState)[0];
-  if (state.msg) {
+  const state = useContext(notificationStateContext);
+  if (state) {
     return <Notifier state={state} />;
   } else {
     return <></>;

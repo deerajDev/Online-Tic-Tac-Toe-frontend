@@ -3,19 +3,34 @@ const gameStateReducer = (state, action) => {
     case "SWITCH_TURN":
       return {
         ...state,
-        myTurn: !state.myTurn,
+        myTurn: action.payload,
       };
     case "SET_GAME_ID":
       return {
         ...state,
-        gameID: action.payload.gameID,
+        gameID: action.payload,
       };
 
-    case "SET_USER_CONFIG":
+    case "SET_GAME_CONFIG":
       return {
         ...state,
-        userType: action.payload.userType,
+        ...action.payload,
         gameStarted: true,
+      };
+
+    case "JOIN":
+      return {
+        ...state,
+        join: true,
+      };
+    case "UPDATE_MATRIX":
+      const value = action.payload.value;
+      const [row_num, col_num] = action.payload["cell_num"];
+      state["matrix"][row_num][col_num] = value;
+
+      return {
+        ...state,
+        ...action.payload,
       };
     default:
       return state;

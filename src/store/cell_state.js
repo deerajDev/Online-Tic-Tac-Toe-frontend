@@ -2,7 +2,7 @@ const cellStateReducer = (state, action) => {
   switch (action.type) {
     case "OPPONENT_MOVE":
       return {
-        opponent_move: action.payload,
+        opponentMove: action.payload,
       };
 
     default:

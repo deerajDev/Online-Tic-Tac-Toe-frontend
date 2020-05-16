@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
-import { joinDispatcherContext } from "../../App";
+import { joinDispatcherContext, notificationDispatchContext } from "../../App";
 import Button from "./button/Button";
 
 import "../css/modal/modal.css";
@@ -8,22 +8,38 @@ const Modal = () => {
   const [gameID, setGameID] = useState("");
   const history = useHistory();
   const joinDispatcher = useContext(joinDispatcherContext);
+  const notificationDispatcher = useContext(notificationDispatchContext);
 
   const verifyGameID = async (e) => {
     e.preventDefault();
     try {
-      // const verified = await fetch(`http://localhost:9000/${gameID}`);
+      const data = await fetch(`http://localhost:9000/${gameID}`);
+      if (data.status === 200) {
+        joinDispatcher({
+          type: "JOIN",
+          payload: gameID,
+        });
+        notificationDispatcher({
+          type: "SUCCESS",
+          payload: "Start playing",
+        });
+        notificationDispatcher({
+          type: "RESET",
+        });
+        //redirect to the game board
 
-      //dispatching the data
-      joinDispatcher({
-        type: "JOIN",
-        payload: gameID,
+        history.push("/game");
+      }
+      //pushing to board
+    } catch (e) {
+      notificationDispatcher({
+        type: "ERROR",
+        payload: "Invalid GameID",
       });
 
-      //pushing to board
-      history.push("/game");
-    } catch (e) {
-      console.log(e);
+      notificationDispatcher({
+        type: "RESET",
+      });
     }
   };
 

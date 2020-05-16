@@ -1,7 +1,5 @@
 import React, { useContext, useMemo } from "react";
-import {
-  gameContextState,
-} from "../../../containers/MainBoard";
+import { gameContextState } from "../../../containers/MainBoard";
 import { connectionContext } from "./Board";
 import Image from "./Image";
 import "../../css/Board/cell.css";
@@ -22,6 +20,7 @@ const Cell = (props) => {
     connection.send(
       JSON.stringify({
         action: "update",
+        game_id: gameState.gameID,
         userType: gameState.userType,
         cell_num: props.cell_num,
       })

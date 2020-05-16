@@ -67,9 +67,13 @@ const Board = (props) => {
           type: "WARNING",
           payload: "match draw",
         });
+
         gameDispatcher({
           type: "RESET",
           payload: data,
+        });
+        notificationDispatch({
+          type: "RESET",
         });
       }
       //if you lost
@@ -84,10 +88,14 @@ const Board = (props) => {
           type: "RESET",
           payload: data,
         });
+        notificationDispatch({
+          type: "RESET",
+        });
       }
       //if you won
       else if (action === "you_won") {
         //you won handler
+
         notificationDispatch({
           type: "SUCCESS",
           payload: "You won",
@@ -95,6 +103,9 @@ const Board = (props) => {
         gameDispatcher({
           type: "RESET",
           payload: data,
+        });
+        notificationDispatch({
+          type: "RESET",
         });
       }
     };

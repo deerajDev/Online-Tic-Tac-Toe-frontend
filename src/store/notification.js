@@ -5,7 +5,13 @@ const notificationReducer = (state, action) => {
     case "WARNING":
       return { msg: action.payload, type: "info" };
     case "ERROR":
+      console.log("entered error case");
       return { msg: action.payload, type: "error" };
+    
+    case "RESET":
+      return{
+        msg:undefined, type:undefined
+      }
     default:
       return state;
   }

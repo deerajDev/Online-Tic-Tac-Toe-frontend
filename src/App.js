@@ -15,7 +15,7 @@ export const joinDispatcherContext = React.createContext();
 export const notificationStateContext = React.createContext();
 export const notificationDispatchContext = React.createContext();
 
-const baseURL = "Online-Tic-Tac-Toe-frontend";
+const baseURL = "/Online-Tic-Tac-Toe-frontend";
 const App = () => {
   const [joinState, joinDispatcher] = useReducer(joinReducer);
   const [notificationState, notificationDispatch] = useReducer(

@@ -4,7 +4,7 @@ import { joinDispatcherContext, notificationDispatchContext } from "../../App";
 import Button from "./button/Button";
 
 import "../css/modal/modal.css";
-const baseURL = "";
+const baseURL = "Online-Tic-Tac-Toe-frontend";
 const Modal = () => {
   const [gameID, setGameID] = useState("");
   const history = useHistory();

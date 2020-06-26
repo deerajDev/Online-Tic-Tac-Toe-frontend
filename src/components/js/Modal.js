@@ -4,6 +4,7 @@ import { joinDispatcherContext, notificationDispatchContext } from "../../App";
 import Button from "./button/Button";
 
 import "../css/modal/modal.css";
+const baseURL = "";
 const Modal = () => {
   const [gameID, setGameID] = useState("");
   const history = useHistory();
@@ -28,7 +29,7 @@ const Modal = () => {
         });
         //redirect to the game board
 
-        history.push("/game");
+        history.push(`${baseURL}/game`);
       }
       //pushing to board
     } catch (e) {

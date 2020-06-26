@@ -15,6 +15,7 @@ export const joinDispatcherContext = React.createContext();
 export const notificationStateContext = React.createContext();
 export const notificationDispatchContext = React.createContext();
 
+const baseURL = "";
 const App = () => {
   const [joinState, joinDispatcher] = useReducer(joinReducer);
   const [notificationState, notificationDispatch] = useReducer(
@@ -27,9 +28,9 @@ const App = () => {
           <joinDispatcherContext.Provider value={joinDispatcher}>
             <joinStateContext.Provider value={joinState}>
               <Notification />
-              <Route exact path="/" component={Choices} />
-              <Route exact path="/join" component={JoinGame} />
-              <Route exact path="/game" component={MainBoard} />
+              <Route exact path={`${baseURL}/`} component={Choices} />
+              <Route exact path={`${baseURL}/join`} component={JoinGame} />
+              <Route exact path={`${baseURL}/game`} component={MainBoard} />
             </joinStateContext.Provider>
           </joinDispatcherContext.Provider>
         </notificationDispatchContext.Provider>

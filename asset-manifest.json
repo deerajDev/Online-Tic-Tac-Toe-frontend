@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Online-Tic-Tac-Toe-frontend/static/css/main.033d14fb.chunk.css",
+    "main.js": "/Online-Tic-Tac-Toe-frontend/static/js/main.6bb33339.chunk.js",
+    "main.js.map": "/Online-Tic-Tac-Toe-frontend/static/js/main.6bb33339.chunk.js.map",
+    "runtime-main.js": "/Online-Tic-Tac-Toe-frontend/static/js/runtime-main.cafd457f.js",
+    "runtime-main.js.map": "/Online-Tic-Tac-Toe-frontend/static/js/runtime-main.cafd457f.js.map",
+    "static/js/2.d37c5a1b.chunk.js": "/Online-Tic-Tac-Toe-frontend/static/js/2.d37c5a1b.chunk.js",
+    "static/js/2.d37c5a1b.chunk.js.map": "/Online-Tic-Tac-Toe-frontend/static/js/2.d37c5a1b.chunk.js.map",
+    "index.html": "/Online-Tic-Tac-Toe-frontend/index.html",
+    "precache-manifest.ca63d4a54b2b7f0e17767cb2d8caf88f.js": "/Online-Tic-Tac-Toe-frontend/precache-manifest.ca63d4a54b2b7f0e17767cb2d8caf88f.js",
+    "service-worker.js": "/Online-Tic-Tac-Toe-frontend/service-worker.js",
+    "static/css/main.033d14fb.chunk.css.map": "/Online-Tic-Tac-Toe-frontend/static/css/main.033d14fb.chunk.css.map",
+    "static/js/2.d37c5a1b.chunk.js.LICENSE.txt": "/Online-Tic-Tac-Toe-frontend/static/js/2.d37c5a1b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cafd457f.js",
+    "static/js/2.d37c5a1b.chunk.js",
+    "static/css/main.033d14fb.chunk.css",
+    "static/js/main.6bb33339.chunk.js"
+  ]
+}
